@@ -73,8 +73,11 @@ Python兴趣点（POI）爬虫，通过百度地图API爬取指定城市兴趣�
 ## 环境配置
 
 - 系统
+
   MacOS/Windows/Linux 都支持
 - 环境
+
   Python3.x都支持
 - 网络
+
   能进百度就行
