@@ -90,13 +90,12 @@ if __name__ == '__main__':
             page_num += 1
         print("{}的{}共有{}个结果".format(city, poi_type, str(len(poi_result))))  # 显示结果总数
         json_to_save = json.dumps(poi_result, sort_keys=True, indent=2, ensure_ascii=False).encode('utf-8')  # 需要存的数据
-        with open("{}的POI分析/{}的{}POI数据.txt".format(city,city, poi_type), "wb+") as fo:  # 读取文件
-            fo.write(json_to_save)  # 存本地
-        print("保存文件成功 ==========> {}的POI分析/{}的{}POI数据.txt".format(city,city, poi_type))
-        # try:
-        #
-        # except:
-        # print("保存文件失败")
+        try:
+            with open("{}的POI分析/{}的{}POI数据.txt".format(city, city, poi_type), "wb+") as fo:  # 读取文件
+                fo.write(json_to_save)  # 存本地
+            print("保存文件成功 ==========> {}的POI分析/{}的{}POI数据.txt".format(city, city, poi_type))
+        except:
+            print("保存文件失败")
 
     print("====================")
     print("查询完毕！")
